@@ -1,0 +1,38 @@
+{
+    "javascript.validate.enable": false,
+    "beautify.config": {
+        "newline_between_rules": false,
+        "selector_separator_newline": false
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "files.eol": "\n",
+    "editor.fontFamily": "Source Code Pro,Consolas, 'Courier New', monospace",
+    "todohighlight.keywords": [
+        "DEBUG:",
+        "REVIEW:",
+        {
+            "text": "NOTE:",
+            "color": "red",
+            "border": "0",
+            "backgroundColor": "yellow"
+        },
+        {
+            "text": "HACK:",
+            "color": "red",
+            "border": "0",
+            "backgroundColor": "yellow"
+        },
+        {
+            "text": "TODO:",
+            "color": "red",
+            "border": "0",
+            "backgroundColor": "yellow"
+        }
+    ],
+    "git.ignoreLimitWarning": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
