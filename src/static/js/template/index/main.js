@@ -9,7 +9,7 @@ registerMicroApps([
     },
     {
         name: 'vueApp',
-        entry: '//localhost:8000',
+        entry: '//localhost:8080',
         container: '#container',
         activeRule: '/views/app-vue',
     }
