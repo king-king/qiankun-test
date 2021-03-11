@@ -20,6 +20,9 @@ start();
 document.querySelector('.react').onclick = () => {
     window.history.pushState({}, "react", "/views/app-react");
 }
+document.querySelector('.react-about').onclick = () => {
+    window.history.pushState({}, "react", "/views/app-react/about");
+}
 
 document.querySelector('.vue').onclick = () => {
     window.history.pushState({}, "vue", "/views/app-vue");
