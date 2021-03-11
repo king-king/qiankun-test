@@ -23,7 +23,6 @@
     },
     "devDependencies": {
         "@jd/wq-babel-engine-plugin": "^0.2.2",
-        "@rescripts/cli": "0.0.16",
         "babel-core": "6.26.0",
         "babel-eslint": "8.2.3",
         "babel-loader": "7.1.3",

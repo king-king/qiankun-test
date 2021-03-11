@@ -5,10 +5,12 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+let instance = null;
+
 function render(props = {}) {
     const { container } = props;
 
-    new Vue({
+    instance = new Vue({
         render: h => h(App),
     }).$mount(container ? container.querySelector('#app') : '#app')
 }
@@ -29,5 +31,4 @@ export async function unmount() {
     instance.$destroy();
     instance.$el.innerHTML = '';
     instance = null;
-    router = null;
 }
