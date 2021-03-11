@@ -37,10 +37,7 @@ config.devServer = {
         colors: true
     },
     historyApiFallback: {
-        rewrites: [{
-            from: /^\/view\/.*/,
-            to: `views/template/index.html`
-        }]
+        rewrites: [{ from: /./, to: '/views/template/index.html' },]
     },
     port,
     host,
@@ -54,11 +51,11 @@ function proxy() {
         changeOrigin: true
     };
     return {
-        [`/${projectMark}/**`]: {
-            ...base,
-            target: localPublicPath,
-            bypass: req => req.url.replace(projectMark, 'views')
-        }
+        // [`/${projectMark}/**`]: {
+        //     ...base,
+        //     target: localPublicPath,
+        //     bypass: req => req.url.replace(projectMark, 'views')
+        // }
     };
 }
 

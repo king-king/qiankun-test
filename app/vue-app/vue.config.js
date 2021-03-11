@@ -1,6 +1,7 @@
 const { name } = require('./package');
 module.exports = {
     devServer: {
+        hot: false,
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
