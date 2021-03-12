@@ -4,13 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>主应用</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #header {
+            background: #046dd7;
+            height: 70px;
+            line-height: 70px;
+        }
+        #header .menu-item {
+            color: white;
+            display: inline-block;
+            margin: 0 20px;
+            cursor: pointer;
+            font-family: '微软雅黑';
+            font-size: 15px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id='filter'>
-        <button class="react">react</button>
-        <button class="react-about">react about</button>
-        <button class="vue">vue</button>
+    <div id='header'>
+        <div class="menu-item react">react</div>
+        <div class="menu-item react-about">react about</div>
+        <div class="menu-item vue">vue</div>
     </div>
     <div id="container"> </div>
 </body>

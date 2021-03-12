@@ -1,5 +1,6 @@
 import { registerMicroApps, start } from 'qiankun';
 
+
 registerMicroApps([
     {
         name: 'reactApp',

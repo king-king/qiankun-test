@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    BrowserRouter ,
+    BrowserRouter,
     Switch,
     Route,
     Link
@@ -8,8 +8,11 @@ import {
 import logo from './logo.svg';
 import './App.css';
 
-
+window.reactAppLoad = 'reactAppLoad';
 export default function App() {
+    const jumpToVue = e => {
+        window.history.pushState({}, 'vue', '/views/app-vue');
+    };
     return (
         <BrowserRouter basename="/views/app-react">
             <div className='App-header'>
@@ -24,6 +27,9 @@ export default function App() {
                         </li>
                         <li>
                             <Link to="/users">Users</Link>
+                        </li>
+                        <li>
+                            <a onClick={jumpToVue}>跳转到vue</a>
                         </li>
                     </ul>
                 </nav>

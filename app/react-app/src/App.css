@@ -14,7 +14,6 @@
 }
 
 .App-header {
-    background-color: #282c34;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,6 +23,7 @@
     color: white;
 }
 .link a {
+    cursor: pointer;
     color: white;
     text-decoration: none;
 }
@@ -38,4 +38,8 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+body{
+    background-color: #123456;
 }
