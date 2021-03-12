@@ -22,8 +22,11 @@ config.watchOptions = {
 config.plugins.push(new NamedModulesPlugin());
 
 config.devServer = {
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+    },
     inline: true,
-    compress: true,
+    compress: false,
     hot: true,
     proxy: proxy(),
     stats: {

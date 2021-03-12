@@ -14,7 +14,7 @@ const store = createStore(reducer, applyMiddleware(thunk));
 
 function render(props) {
     const { container } = props;
-    ReactDOM.render(<Provider store={store}><Capp /></Provider>, container ? container.querySelector('#root') : document.querySelector('#main'));
+    ReactDOM.render(<Provider store={store}><Capp /></Provider>, container ? container.querySelector('#main') : document.querySelector('#main'));
 }
 
 if (!window.__POWERED_BY_QIANKUN__) {
@@ -30,5 +30,5 @@ export async function mount(props) {
 
 export async function unmount(props) {
     const { container } = props;
-    ReactDOM.unmountComponentAtNode(container ? container.querySelector('#root') : document.querySelector('#main'));
+    ReactDOM.unmountComponentAtNode(container ? container.querySelector('#main') : document.querySelector('#main'));
 }

@@ -13,10 +13,21 @@ registerMicroApps([
         entry: '//localhost:8080',
         container: '#container',
         activeRule: '/views/app-vue',
+    },
+    {
+        name: 'reactApp2',
+        entry: 'http://localhost:9100/react-app2/template/index.html',
+        container: '#container',
+        activeRule: '/views/app-react2',
     }
 ]);
 // 启动 qiankun
 start();
+
+
+document.querySelector('.react2').onclick = () => {
+    window.history.pushState({}, "react", "/views/app-react2");
+}
 
 document.querySelector('.react').onclick = () => {
     window.history.pushState({}, "react", "/views/app-react");

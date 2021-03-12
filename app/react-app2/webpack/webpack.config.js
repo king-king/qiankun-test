@@ -1,3 +1,4 @@
+const packageName = require('../package.json').name;
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
@@ -101,7 +102,10 @@ const config = {
         path: path.resolve(__dirname, '../build'),
         filename: `static/js/[name]${isProduction ? '-[chunkhash:10]' : ''}.js`,
         // 用于设定css中引用img的路径
-        publicPath: '/'
+        publicPath: '/',
+        library: `${packageName}-[name]`,
+        libraryTarget: 'umd',
+        jsonpFunction: `webpackJsonp_${packageName}`
     },
     plugins: getPlugins(),
     module: {
