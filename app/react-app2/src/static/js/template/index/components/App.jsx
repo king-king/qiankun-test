@@ -11,11 +11,14 @@ class App extends React.Component {
     onMetaChange() {
         // meta数据准备完毕后的回调
     }
+    jump = () => {
+        history.pushState({}, 'react', '/views/app-react');
+    }
     render() {
         return (
             <Page onMetaChange={() => { this.onMetaChange(); }}>
                 {/* 在这里写页面的内容 */}
-                <Example />
+                <button onClick={this.jump}>react</button>
                 <Example />
             </Page>
         );
