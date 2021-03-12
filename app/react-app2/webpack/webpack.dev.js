@@ -2,8 +2,8 @@ const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const BabelEnginePlugin = require('@jd/wq-babel-engine-plugin');
 const config = require('./webpack.config');
 
-const projectMark = 'projectMark';
-const port = 8080;
+const projectMark = 'react-app2';
+const port = 9100;
 const host = 'localhost';
 // 本地环境静态资源路径
 const localPublicPath = `http://${host}:${port}/`;

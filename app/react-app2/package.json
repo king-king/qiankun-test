@@ -6,7 +6,6 @@
         "doc": "doc"
     },
     "scripts": {
-        "commitmsg": "node ./scripts/commit-msg.js",
         "start": "webpack-dev-server --progress --hot --config ./webpack/webpack.dev.js",
         "build": "webpack  --config ./webpack/webpack.config.js --progress --json > stats.json",
         "release": "cross-env NODE_ENV=production npm run build"
