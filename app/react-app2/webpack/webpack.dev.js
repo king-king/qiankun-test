@@ -1,5 +1,4 @@
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
-const BabelEnginePlugin = require('@jd/wq-babel-engine-plugin');
 const config = require('./webpack.config');
 
 const projectMark = 'react-app2';
@@ -11,10 +10,6 @@ const localPublicPath = `http://${host}:${port}/`;
 config.output.publicPath = localPublicPath;
 config.devtool = '#eval'; // 调试版要开启sourcemap
 config.plugins.shift(); // 调试版不需要清空dist文件夹
-
-config.plugins.unshift(new BabelEnginePlugin({
-    presets: ['env']
-}));
 
 // 开启文件监听
 config.watch = true;
