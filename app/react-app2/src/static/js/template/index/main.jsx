@@ -25,6 +25,7 @@ export async function bootstrap() {
 }
 
 export async function mount(props) {
+    console.log(window.appReact)
     render(props);
 }
 

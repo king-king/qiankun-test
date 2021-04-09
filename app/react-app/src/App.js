@@ -13,8 +13,13 @@ export default function App() {
     const jumpToVue = e => {
         window.history.pushState({}, 'vue', '/views/app-vue');
     };
+    const changeWindow = () => {
+        window.appReact = Date.now();
+        console.log(window, window.appReact)
+    }
     return (
         <BrowserRouter basename="/views/app-react">
+            <button onClick={changeWindow} >changeWindow</button>
             <div className='App-header'>
                 <img src={logo} className="App-logo" alt="logo" />
                 <nav>
@@ -53,7 +58,7 @@ export default function App() {
 }
 
 function Home() {
-    return <h2>Home</h2>;
+    return <h2 className='my-home'>Home</h2>;
 }
 
 function About() {
